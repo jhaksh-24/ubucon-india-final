@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Base from "../../../layouts/Base.astro";
 import Icon from "../../../components/Icon.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import VanillaVenueMap from "../../../components/VanillaVenueMap.astro";
 import { url } from "../../../lib/url";
 import { dateRange } from "../../../lib/dates";
 
@@ -49,13 +50,7 @@ const crumbs = [
             <div class="venue-grid">
               <div class="venue-map">
                 {e.mapEmbed ? (
-                  <iframe
-                    src={e.mapEmbed}
-                    title={`Map of ${e.venue}`}
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    allowfullscreen
-                  />
+                  <VanillaVenueMap lng={77.5642296} lat={12.9416203} />
                 ) : (
                   <span class="venue-map__ph">Map</span>
                 )}
