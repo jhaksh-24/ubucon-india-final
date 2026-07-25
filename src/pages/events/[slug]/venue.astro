@@ -93,7 +93,7 @@ const crumbs = [
                       <summary class="c-accordion__tab">
                         <span>{g.title}</span>
                         <Icon
-                          name="chevron-down"
+                          name="chevron-right"
                           size={20}
                           class="c-accordion__chev"
                         />
@@ -216,8 +216,8 @@ const crumbs = [
     transition: transform 0.15s ease;
     color: var(--u-aubergine);
   }
-  .c-accordion__item[open] .c-accordion__chev {
-    transform: rotate(180deg);
+  .c-accordion__item[open] :global(.c-accordion__chev) {
+    transform: rotate(90deg);
   }
   .c-accordion__panel {
     padding: 0 0 1.25rem;
