@@ -98,7 +98,7 @@ const cfpTypes = [
           {
             cta && (
               <a
-                class="p-button--positive has-icon"
+                class="p-button--brand has-icon"
                 href={cta.href}
                 rel={cta.external ? "noopener" : undefined}
                 target={cta.external ? "_blank" : undefined}
@@ -261,7 +261,7 @@ const cfpTypes = [
             )
           }
           <a
-            class="p-button--positive has-icon cfp__submit"
+            class="p-button--brand has-icon cfp__submit"
             href={e.cfpUrl ?? e.ticketUrl}
             rel="noopener"
             target="_blank"
@@ -395,7 +395,7 @@ const cfpTypes = [
     gap: 0.5rem;
   }
   .hero__cta .p-button,
-  .hero__cta .p-button--positive {
+  .hero__cta .p-button--brand {
     padding: 0.7rem 1.4rem;
     font-size: 1.05rem;
     margin: 0;
@@ -617,7 +617,7 @@ const cfpTypes = [
     margin-bottom: 1rem;
   }
   .cfp__submit {
-    /* Vanilla p-button--positive provides the colour; keep sizing only. */
+    /* Vanilla p-button--brand provides the colour; keep sizing only. */
     padding: 0.7rem 1.4rem;
   }
 
@@ -790,7 +790,7 @@ const cfpTypes = [
       align-items: stretch;
     }
     .hero__cta .p-button,
-    .hero__cta .p-button--positive {
+    .hero__cta .p-button--brand {
       justify-content: center;
     }
     /* Sponsors - tighter logos/gaps on phones. */

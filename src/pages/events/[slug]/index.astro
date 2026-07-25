@@ -91,7 +91,7 @@ const hasSchedule = (await getIndico(e.indicoId)).sessions.length > 0;
               <>
                 {ticketActive ? (
                   <a
-                    class="p-button--positive"
+                    class="p-button--brand"
                     href={e.ticketUrl}
                     rel="noopener"
                     target="_blank"
@@ -100,7 +100,7 @@ const hasSchedule = (await getIndico(e.indicoId)).sessions.length > 0;
                   </a>
                 ) : (
                   <button
-                    class="p-button--positive"
+                    class="p-button--brand"
                     type="button"
                     disabled
                     aria-disabled="true"
@@ -122,7 +122,7 @@ const hasSchedule = (await getIndico(e.indicoId)).sessions.length > 0;
               <>
                 {e.highlightsUrl && (
                   <a
-                    class="p-button--positive"
+                    class="p-button--brand"
                     href={e.highlightsUrl}
                     rel="noopener"
                     target="_blank"
@@ -278,7 +278,7 @@ const hasSchedule = (await getIndico(e.indicoId)).sessions.length > 0;
           </p>
           <div class="ov-cfp__actions">
             <a
-              class="p-button--positive"
+              class="p-button--brand"
               href={e.cfpUrl}
               rel="noopener"
               target="_blank"
@@ -405,7 +405,7 @@ const hasSchedule = (await getIndico(e.indicoId)).sessions.length > 0;
     gap: 0.75rem;
   }
   .ov-cta .p-button,
-  .ov-cta .p-button--positive {
+  .ov-cta .p-button--brand {
     margin: 0;
   }
   .ov-cta button:disabled {
@@ -601,7 +601,7 @@ const hasSchedule = (await getIndico(e.indicoId)).sessions.length > 0;
     margin: 0 0 1.25rem;
     max-width: 55rem;
   }
-  .ov-cfp__actions .p-button--positive {
+  .ov-cfp__actions .p-button--brand {
     margin: 0;
   }
 
@@ -630,7 +630,7 @@ const hasSchedule = (await getIndico(e.indicoId)).sessions.length > 0;
       align-items: stretch;
     }
     .ov-cta .p-button,
-    .ov-cta .p-button--positive {
+    .ov-cta .p-button--brand {
       text-align: center;
     }
   }
