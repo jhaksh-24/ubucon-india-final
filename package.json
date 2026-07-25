@@ -21,7 +21,6 @@
     "vanilla-framework": "^4.55.1"
   },
   "devDependencies": {
-    "@types/geojson": "^7946.0.16",
     "prettier-plugin-astro": "^0.14.1",
     "sass": "^1.101.3"
   }
