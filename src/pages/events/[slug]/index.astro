@@ -54,6 +54,9 @@ const cfpOpen = !past && e.cfpUrl;
 
 const ticketActive = !past && !!e.ticketUrl;
 const hasSchedule = (await getIndico(e.indicoId)).sessions.length > 0;
+
+const numFacts = 2 + (venueSet ? 1 : 0) + (past && e.stats[0] ? 1 : 0);
+const factCol = Math.floor(12 / numFacts);
 ---
 
 <Base title={e.name} description={e.intro}>
@@ -145,17 +148,17 @@ const hasSchedule = (await getIndico(e.indicoId)).sessions.length > 0;
   </header>
 
   <!-- ─────────── Quick facts ─────────── -->
-  <div class="ov-facts-band">
-    <div class="u-container ov-facts-band__inner">
-      <div class="ov-fact">
+  <div class="p-strip--light is-shallow">
+    <div class="row">
+      <div class={`col-${factCol} ov-fact`}>
         <strong>{dateRange(e.startDate, e.endDate)}</strong><span>Dates</span>
       </div>
-      <div class="ov-fact">
+      <div class={`col-${factCol} ov-fact`}>
         <strong>{e.city.replace(/,.*$/, "")}</strong><span>Location</span>
       </div>
       {
         venueSet && (
-          <div class="ov-fact">
+          <div class={`col-${factCol} ov-fact`}>
             <strong>{e.venue}</strong>
             <a class="p-button--link" href={sub("venue")} rel="noopener">
               <span>Venue</span>
@@ -166,7 +169,7 @@ const hasSchedule = (await getIndico(e.indicoId)).sessions.length > 0;
       }
       {
         past && e.stats[0] && (
-          <div class="ov-fact">
+          <div class={`col-${factCol} ov-fact`}>
             <>
               <strong>{e.stats[0].n}</strong>
               <span>{e.stats[0].label}</span>
@@ -421,17 +424,6 @@ const hasSchedule = (await getIndico(e.indicoId)).sessions.length > 0;
   }
 
   /* Quick facts band */
-  .ov-facts-band {
-    background: #f6f6f6;
-    border-block: 1px solid var(--u-placeholder);
-  }
-  .ov-facts-band__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.5rem 4rem;
-    padding-block: 1.75rem;
-  }
   .ov-fact {
     display: grid;
     gap: 0.25rem;
