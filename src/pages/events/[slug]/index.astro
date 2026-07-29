@@ -149,34 +149,36 @@ const factCol = Math.floor(12 / numFacts);
 
   <!-- ─────────── Quick facts ─────────── -->
   <div class="p-strip--light is-shallow">
-    <div class="row">
-      <div class={`col-${factCol} ov-fact`}>
-        <strong>{dateRange(e.startDate, e.endDate)}</strong><span>Dates</span>
+    <div class="u-container">
+      <div class="row">
+        <div class={`col-${factCol} ov-fact`}>
+          <strong>{dateRange(e.startDate, e.endDate)}</strong><span>Dates</span>
+        </div>
+        <div class={`col-${factCol} ov-fact`}>
+          <strong>{e.city.replace(/,.*$/, "")}</strong><span>Location</span>
+        </div>
+        {
+          venueSet && (
+            <div class={`col-${factCol} ov-fact`}>
+              <strong>{e.venue}</strong>
+              <a class="p-button--link" href={sub("venue")} rel="noopener">
+                <span>Venue</span>
+                <i class="p-icon--chevron-right" />
+              </a>
+            </div>
+          )
+        }
+        {
+          past && e.stats[0] && (
+            <div class={`col-${factCol} ov-fact`}>
+              <>
+                <strong>{e.stats[0].n}</strong>
+                <span>{e.stats[0].label}</span>
+              </>
+            </div>
+          )
+        }
       </div>
-      <div class={`col-${factCol} ov-fact`}>
-        <strong>{e.city.replace(/,.*$/, "")}</strong><span>Location</span>
-      </div>
-      {
-        venueSet && (
-          <div class={`col-${factCol} ov-fact`}>
-            <strong>{e.venue}</strong>
-            <a class="p-button--link" href={sub("venue")} rel="noopener">
-              <span>Venue</span>
-              <i class="p-icon--chevron-right" />
-            </a>
-          </div>
-        )
-      }
-      {
-        past && e.stats[0] && (
-          <div class={`col-${factCol} ov-fact`}>
-            <>
-              <strong>{e.stats[0].n}</strong>
-              <span>{e.stats[0].label}</span>
-            </>
-          </div>
-        )
-      }
     </div>
   </div>
 
