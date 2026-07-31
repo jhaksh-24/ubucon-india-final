@@ -80,6 +80,7 @@ const isActive = (href: string) =>
                 "p-navigation__item",
                 { "is-selected": isActive(l.href) },
               ]}
+              transition:name={isActive(l.href) ? "active-tab" : undefined}
             >
               <a
                 class="p-navigation__link"
