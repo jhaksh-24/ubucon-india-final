@@ -32,9 +32,8 @@ const isActive = (href: string) =>
     height: 1.5rem;
   }
 
-  /* Ultra-rich premium glassmorphism for the header */
   #navigation.p-navigation.is-dark.is-sticky {
-    background: rgba(25, 25, 30, 0.65) !important; /* Sleek dark tint */
+    background: rgba(25, 25, 30, 0.65) !important;
     backdrop-filter: blur(20px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -42,14 +41,12 @@ const isActive = (href: string) =>
     transition: all 0.4s ease;
   }
 
-  /* Ensure inner containers are transparent so the glass effect shows through */
   #navigation.p-navigation.is-dark .p-navigation__banner,
   #navigation.p-navigation.is-dark .p-navigation__nav,
   #navigation.p-navigation.is-dark .p-navigation__row--25-75 {
     background: transparent !important;
   }
 
-  /* Premium interactive hover effect for links */
   #navigation .p-navigation__link {
     transition: color 0.3s ease, text-shadow 0.3s ease !important;
   }
@@ -59,9 +56,8 @@ const isActive = (href: string) =>
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.5) !important;
   }
 
-  /* Soften the active state for a more elegant look */
   #navigation .p-navigation__item.is-selected .p-navigation__link {
-    color: #e95420 !important; /* Ubuntu orange accent */
+    color: #e95420 !important;
     text-shadow: 0 0 8px rgba(233, 84, 32, 0.4) !important;
   }
 </style>
